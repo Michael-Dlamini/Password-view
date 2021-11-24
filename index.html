@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Password view</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="wrapper">
+<input type="Password" name="pass" placeholder="enter password" id="password">
+<span>
+	
+<i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+</span>
+
+<script type="text/javascript">
+	
+
+var state=false;
+function toggle()
+{
+
+	if (state)
+	 {
+		document.getElementById("password").setAttribute("type","password");
+		
+		document.getElementById("eye").style.color='grey';
+		state=false;
+	}
+	else
+	{
+		document.getElementById("password").setAttribute("type","text");
+		document.getElementById("eye").style.color='red';
+		state=true;
+	}
+
+}
+
+</script>
+
+
+
+</div>
+</body>
+</html>
